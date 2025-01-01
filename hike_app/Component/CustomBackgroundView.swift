@@ -11,26 +11,26 @@ struct CustomBackgroundView: View {
     var body: some View {
 
         ZStack {
-            Color("ColorGreenDark")
+            Color.customGreenDark
                 .cornerRadius(40)
                 .offset(y:12)
 
-            Color("ColorGreenLight")
+            Color.customGreenLight
                 .cornerRadius(40)
                 .offset(y:3)
                 .opacity(0.85)
 
             LinearGradient(
                 colors: [
-                    Color("ColorGreenLight"),
-                    Color("ColorGreenMedium")
+                    .customGreenLight,
+                    .customGreenMedium
                 ],
                 startPoint: .top,
                 endPoint: .bottom
             )
             .cornerRadius(40)
 
-        }.frame(width: 350,height: 600)
+        }
     }
 }
 
