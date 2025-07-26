@@ -2,38 +2,38 @@
 //  CustomBackgroundView.swift
 //  hike_app
 //
-//  Created by Togu Mogu on 30/12/24.
+//  Created by Md Mosfeq Anik on 6/7/25.
 //
 
 import SwiftUI
 
 struct CustomBackgroundView: View {
     var body: some View {
-
         ZStack {
+            // MARK: - 3. DEPTH
             Color.customGreenDark
                 .cornerRadius(40)
-                .offset(y:12)
-
+                .offset(y: 12)
+            
+            // MARK: - 2. LIGHT
             Color.customGreenLight
                 .cornerRadius(40)
-                .offset(y:3)
+                .offset(y: 3)
                 .opacity(0.85)
-
-            LinearGradient(
-                colors: [
-                    .customGreenLight,
-                    .customGreenMedium
-                ],
-                startPoint: .top,
-                endPoint: .bottom
+            
+            // MARK: - 1. SURFACE
+            LinearGradient(colors: [
+                .customGreenLight,
+                .customGreenMedium
+            ],
+                           startPoint: .top,
+                           endPoint: .bottom
             )
             .cornerRadius(40)
-
         }
     }
 }
 
 #Preview {
-    CustomBackgroundView()
+    CustomBackgroundView().padding()
 }

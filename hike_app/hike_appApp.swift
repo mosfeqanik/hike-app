@@ -2,7 +2,7 @@
 //  hike_appApp.swift
 //  hike_app
 //
-//  Created by Togu Mogu on 23/12/24.
+//  Created by Md Mosfeq Anik on 6/7/25.
 //
 
 import SwiftUI
