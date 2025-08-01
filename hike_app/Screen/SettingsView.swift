@@ -67,7 +67,30 @@ struct SettingsView: View {
                 }
                     .padding(.vertical,8)
             ){
-                LabeledContent("Application", value: "Hike")
+                // Basic Labeled Content
+//                LabeledContent("Application", value: "Hike")
+                // Advanced Labeled Content
+                
+//                LabeledContent{
+//                    Text("Hike")
+//                }label: {
+//                    HStack {
+//                        ZStack {
+//                            RoundedRectangle(cornerRadius: 8)
+//                                .frame(width:30 ,height: 30)
+//                                .foregroundColor(.blue)
+//                            Image(systemName: "apps.iphone").foregroundColor(.white)
+//                                .fontWeight(.semibold)
+//                        }
+//                        Text("Application")
+//                    }
+//                }
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "Hike", rowTintColor: .blue)
+                CustomListRowView(rowLabel: "Compatibility", rowIcon: "info.circle", rowContent: "iOS,iPadOS", rowTintColor: .red)
+                CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+                CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "1.0", rowTintColor: .purple)
+                CustomListRowView(rowLabel: "Developer", rowIcon: "ellipsis.curlybraces", rowContent: "Md Mosfeq Anik", rowTintColor: .mint)
+                CustomListRowView(rowLabel: "Designer", rowIcon: "globe",rowTintColor: .indigo,rowLinkLabel: "Portfolio", rowLinkDestination: "https://mosfeqanik.github.io" )
             }
         }
     }
